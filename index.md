@@ -29,8 +29,8 @@ This is meant as a guide for newcommers & experienced modders wanting to tackle 
 The goal of this part is to roughly go over every big conceptual "part" of the engine and have a small write-up about what it's purpose is, how it achieves it and how it fits into the rest. Of course you don't have to read it sequentially, feel free to click away.
 
  * `null`: What's yet to be.
-    * Short-term roadmap
-    * [Planned, envisionned and otherwise rejected features](features.md) (mid/long-term roadmap)
+    * [Short-term roadmap](engine_tour/roadmap.md)
+    * [Planned, envisionned and otherwise rejected features](engine_tour/planned_features.md) (mid/long-term roadmap)
  * `common`: The basics of the engine
     * World data structures: How the data is stored and kept in memory
     * Custom file formats & DSLs

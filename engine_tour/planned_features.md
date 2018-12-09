@@ -8,6 +8,13 @@ Big projects like Chunk Stories are always playgrounds for grand idea, some of w
 
 Kotlin's introduction has been a very successfull experiment with the codebase and so moving forward it's only logical everything would get ported accross.|
 
+### Better sound
+
+Use OpenAL EFX to enable dynamic environmental effects such as reverberation and sound muffling
+
+ * Better footsteps
+ * Environment ambient sounds ( wind, forests noises, birds, etc. )
+
 ### Enhanced launcher & bundled JVM
 
 To avoid many tech support issues on Windows, we should instead just bundle an OpenJDK distribution with the launcher. This could also help with GC performance tuning.
