@@ -6,7 +6,7 @@ Big projects like Chunk Stories are always playgrounds for grand idea, some of w
 
 ### Full Kotlin port
 
-Kotlin's introduction has been a very successfull experiment with the codebase and so moving forward it's only logical everything would get ported accross.|
+Kotlin's introduction has been a very successfull experiment with the codebase and so moving forward it's only logical everything would get ported accross.
 
 ### Better sound
 
