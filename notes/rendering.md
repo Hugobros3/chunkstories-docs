@@ -35,6 +35,41 @@
 
 ## Data flow
 
+ 1. Gather rendering tasks: Build a FrameGraph 
+ 2. gatherRepresentations() : fill a buckets of <out Representation::class, Representation>
+	 * Ask each dispatching system to enumerate what it wants to draw
+	 * foreach representation object type:
+		 * cullable ? cull for every context camera and store it an bitmask
+ 3. dispatch representations
+	 * foreach rendering context
+	 	 * figure out the interested passes systems and submit them the representations (with the optional cull data bitmask)
+
+example
+```
+ingamelayer.kt: call gather(RenderingContext(player.camera))
+
+passes {
+	sky
+	gbuffers
+	deferred shading // oh wait this calls render(sun.directionalLight)
+	post
+}
+
+so becomes
+
+passes {
+	rendercontext = main {
+	sky
+	gbuffers
+	deferred shading
+		rendercontext = sun.shadow {
+			shadowmap
+		}
+	post
+	}
+}
+```
+
 ### Textures
 
 VK_EXT_descriptor_indexing is the only true god. The GL/GLES implem will figure something out.
@@ -46,6 +81,10 @@ Let uniforms be provided:
  * per-rendering-context ( camera stuff mostly )
  * per-system ( system-dependant stuff )
  * per-batch/draw ( frowned upon, use instance data instead )
+
+### Per-instance data
+
+Using structs too
 
 ### Camera/Rendering contexts
 
@@ -106,12 +145,17 @@ rendertask blurBuffer(renderBuffer: RenderBuffer, blurFactor: Float) {
 
 ### Naming stuff
 
+ * Pass = A specific configuration of outputs ( output render targets configuration ), inputs (for knowledge necessary for layout transitions) and depth, along with dependencies for ordering.
+ * GraphicalSystem = Something that will issue draw commands inside a pass
+ * RenderBuffer = A buffer passes can use
+ * RenderTask = A scoped sub-graph containing render buffers and passes. Can be called explicitely/dynamically
+ * RenderingContext = An instance of a render task executing
+ * FrameGraph = The final graph of every rendering context and pass to execute for a given frame
+
  * Representation = Generic interface exposed by anything that can be given to the rendering front-end
  * Mesh = .dae/.gltf model loaded from asset
 	- Can include exported materials from the modelling software as default
  * Model = Instance of a mesh, possibly with a set of material overrides, InstanceData (and possibly animation data, maybe that's just one sort of InstanceData though ? )
- * Light = 
-
  * Material = Named set of textures/values that define how geometry should be shaded
  * Matter ( from legay Material name usage ) = Generic template and classification for Blocks, representing a physical kind of matter/material as we conceptually see it ( glass, wood, rock etc )
  * Block = A named bag for holding everything that defines a certain block type
