@@ -36,7 +36,9 @@
 ## Data flow
 
  1. Gather rendering tasks: Build a FrameGraph 
- 2. gatherRepresentations() : fill a buckets of <out Representation::class, Representation>
+	 * Gather main camera
+	 * Figure out required sub-contexts (shadow mapping and so on)
+ 2. gatherRepresentations() : fill buckets of <out Representation::class, Representation>
 	 * Ask each dispatching system to enumerate what it wants to draw
 	 * foreach representation object type:
 		 * cullable ? cull for every context camera and store it an bitmask
