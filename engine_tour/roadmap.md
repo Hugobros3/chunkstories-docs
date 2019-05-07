@@ -4,17 +4,17 @@
 
 ### Immediately
 
- * Voxel texturing
- * Custom voxels models (using instancing)
- * Chunk meshes scheduling accross multiple passes
+ * ~~Voxel texturing~~ done
+ * ~~Custom voxels models (using instancing)~~ not needed for now
+ * ~~Chunk meshes scheduling accross multiple passes~~ done
 
 ### Soon
 
- * Shadows
+ * ~~Shadows~~ done
  * Point & Area lights
- * Pass random world info structs to shaders
- * Representations ( entities )
-    * In particular: handle Surfaces -> textures mapping
+ * ~~Pass random world info structs to shaders~~ done via rendergraph api
+ * ~~Representations ( entities )~~ done
+    * ~~In particular: handle Surfaces -> textures mapping~~ done
  * Particles
  * Far terrain
  * Decals
