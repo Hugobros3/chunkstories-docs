@@ -6,15 +6,15 @@ Welcome to the Chunk Stories documentation! This is meant to be the number one p
 
 * [How to install & run Chunk Stories](install.md)
 * [Troubleshooting, common issues and bug reports](problems.md)
-* How to create a custom server
-* How to use the Minecraft map converter
+* [How to create your own server](dedicated_server.md)
+* [How to use the Minecraft map converter](map_converter.md)
 
 ## Content creation guide
 
 This is meant as a guide for newcommers & experienced modders wanting to tackle content creation in Chunk Stories. You can skip the bits that talk about programming if that's not what you're interested in doing !
 
 * How to create your first mod (setup)
-* How mods work ( assets, packaging, how multiple mods interract )
+* How mods work ( assets, packaging, how multiple mods interact )
 * How to make plugins & custom classes
 * Adding new blocks
 * Creating and importing 3D models in Chunk Stories

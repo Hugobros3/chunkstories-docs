@@ -6,17 +6,17 @@ The game is built as scalable as can be, and runs on as wide a variety of hardwa
 
 | Component | Requirement | Recommandation | Reason |
 | --- | --- | --- | --- |
-| CPU | 64-bit x86 CPU | Quad-core i5 or Ryzen | 32-bit x86 is dead, this game leverages threads for most tasks. An ARM port is doable but not planned. |
-| GPU | Vulkan or OpenGL ES 3.0 support | Any good value 200$ GPU within the last 5 years | We don't offer support for ancient APIs and hardware: it's a waste of our time, a huge effort so the game can run and look like crap on inappropriate cards. |
-| RAM | 4GB | 8GB | With high view distances the ram usage will scale with a square factor. Consider 16GB if pushing extreme view distances. |
-| OS | Windows Vista, Linux | OSX may work, not supported | Macs don't have native Vulkan support and no major devs owns one. Windows XP is 32-bit only and 17 years old. |
-| Drive space | 500MB free space | 1GB free space | The game isn't actually even 500Mb but please it's a bad idea to live with an almost-full drive |
+| CPU | 64-bit x86 CPU | Quad-core i5 or Ryzen | 32-bit x86 is dead, your Pentium III wouldn't cut it anyways. An ARM port is doable but not planned at the moment. |
+| GPU | Vulkan or OpenGL 3.3 support | Any good value 200$ GPU within the last 5 years | We don't offer support for ancient APIs and hardware: it's a waste of our time, and would just result in the game running like crap anyways. |
+| RAM | 4GB | 8GB | With high view distances the ram usage will scale by a square factor. Consider 16GB if pushing extreme view distances. |
+| OS | Windows Vista, Linux | OSX may work, not supported | Macs don't have native Vulkan support and no major devs owns one. Windows XP is 32-bit only and 17 years old, so it can bugger off. |
+| Drive space | 500MB free space | 1GB free space | The game isn't actually even 500Mb but it's a bad idea to live with an almost-full drive |
 
 ## Installing
 
 The simplest way is simply to go to our [site](https://chunkstories.xyz) and download the launcher, from there it will create a `.chunkstories` folder on your home folder and download all the necessary files.
 
-The only prerequisite is to have some flavour of the JVM installed <!-- Warning: Update this bit if we actually bundle a JVM ! -->, we recommand going with OpenJDK 8 or 11, as Oracle's implementation of the JVM isn't free software and is in fact planned to become paid for in the not-too-distant future. OpenJDK is as performant as the Oracle JVM so you don't have to worry about this.
+The only prerequisite is to have some flavour of the JVM installed <!-- Warning: Update this bit if we actually bundle a JVM ! -->, we recommand going with OpenJDK 8 or 11, as Oracle's implementation of the JVM isn't free software and is in fact planned to become paid for in the not-too-distant future. OpenJDK is as performant as the Oracle JVM so you don't have to worry about this. [Click here to download OpenJDK](https://adoptopenjdk.net/) from the AdoptOpenJDK initiative.
 
 ## Running
 
